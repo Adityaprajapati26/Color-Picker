@@ -1729,7 +1729,7 @@ btn.addEventListener("click", async () => {
 
         var myMap = new Map();
 
-        //local Storage
+        //local storage
         chrome.storage.local.get({ Colors: [] }, function (result) {
           var Color = result.Colors;
           Color.push({ color: color, HasBeenUploadedYet: false });
