@@ -147,6 +147,8 @@ btn.addEventListener('click', async () => {
         //rgb color
                 
                 const hexColor= hexToRgb(color)
+
+                const [i,t,m] = RGBToHSL(hexColor.r,hexColor.g,hexColor.b)
                 
                 rgbgrid.style.background=color
                 rgb.innerText="rgb:"
@@ -155,6 +157,10 @@ btn.addEventListener('click', async () => {
                 g.innerText=hexColor.g+","
                 b.innerText=hexColor.b
                 
+                hsl.innerText="hsl:"
+                h.innerText=Math.floor(i)+","
+                s.innerText=Math.floor(t)+","
+                l.innerText=Math.floor(m)
                 function hexToRgb(color) {
                     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
                     return result ? {
@@ -200,7 +206,7 @@ async function pickColor() {
     }
 }
 
-const RGBToHSL = (r, g, b) => {
+function RGBToHSL (r, g, b){
     r /= 255;
     g /= 255;
     b /= 255;
@@ -218,7 +224,7 @@ const RGBToHSL = (r, g, b) => {
       100 * (s ? (l <= 0.5 ? s / (2 * l - s) : s / (2 - (2 * l - s))) : 0),
       (100 * (2 * l - s)) / 2,
     ];
-  }
+}
 
 
 
