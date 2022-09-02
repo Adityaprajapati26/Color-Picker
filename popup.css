@@ -1,0 +1,149 @@
+body {
+    background: #f1f5f9;
+}
+.Parent{
+    width:500px;
+    border:1px solid red;
+    display: flex;
+    gap:3px
+}
+.Parent2{
+    width:500px;
+    border:1px solid red;
+    display: flex;
+    gap:3px
+}
+.wrapper {
+    width: 250px;
+    text-align: center;
+    border:1px solid green;
+}
+.changeColorBtn {
+    width: 120px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    background: #facc15;
+    cursor: pointer;
+}
+.colorGrid {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+}
+.selectedColor {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.colorValue {
+    margin-left: 5px;
+    font-weight: bold;
+}
+#colorGrid
+{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+
+}
+#colorValue {
+    margin-left: 5px;
+    font-weight: bold;
+    display: flex;
+    border :1px solid red;
+    gap:1px
+    
+}
+#selectColor{
+    align-items: center;
+    display: flex;
+}
+#select{
+    font-weight: bold;
+    margin: auto;
+
+}
+#clear{
+    width: 120px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgba(145, 243, 53, 0.842);
+}
+
+#Selected{
+
+    width: 120px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgba(219, 212, 219, 0.842);
+}
+#Colors{ 
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+   padding:5px;
+    /* gap:2px; */
+    height: 50px;
+    width:240px;
+    margin:auto;
+    margin-top: 5px;
+    border:1px solid rgb(86, 19, 163);
+}
+#side{
+    display:flex;
+    gap:2px;
+    margin:auto;
+    height:50px;
+    padding: 5px;
+    width: 140px;
+    border:1px solid rgb(70, 185, 85)
+}
+.Common{
+    height: 15px;
+    width:15px;
+    border: 1px solid rgb(17, 17, 17);
+    
+}
+.red{
+    background-color: red;
+   
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.orange{
+    background-color: orange;
+}
+.white{
+    background-color: white;
+}
+.blue{
+    background-color: blue;
+}
+.brown{
+    background-color: brown;
+}
+.black{
+    background-color: black;
+}
+.purple{
+    background-color: purple;
+}
+.pink{
+    background-color: pink;
+}
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="Parent">
+  <div class="wrapper">
+    <h2>Welcome to my color picker</h2>
+    <button class="changeColorBtn">Pick color</button>
+    <div class="selectedColor">
+        <span class="colorGrid"></span>
+        <span class="colorValue"></span>
+    </div>
+    <div class="selectedColor">
+      <span id="colorGrid"></span>
+      <div id="colorValue">
+        <p id="rgb"></p>
+            <p id="r"></p>
+     
+            <p id="g"> </p>
+        
+            <p id="b"></p>
+      </div>
+    </div>
+  </div>
+  <!-- Select Color from storage -->
+  <div class="wrapper">
+    <h2>Previous selected Colors</h2>
+    <div id="SelectColor">
+      <select id="Select">
+        <option >Select</option>
+        
+        
+      </select>
+     <button id="Selected">Select</button>
+    </div>
+    <button id="clear">Clear</button>
+   
+
+  </div>
+
+
+</div>
+<div class="Parent2">
+  <div id="Colors">
+    <div class="Common red"></div>
+    <div class="Common green"></div>
+    <div class="Common yellow"></div>
+    <div class="Common pink"></div>
+    <div class="Common orange"></div>
+    <div class="Common blue"></div>
+    <div class="Common brown"></div>
+    <div class="Common black"></div>
+    <div class="Common white"></div>
+    <div class="Common purple"></div>
+
+  </div>
+  <div id="side">
+    <p id="value">Hex value:</p>
+    <p id="select_color"></p>
+  </div>
+</div>
+    <script src="popup.js"></script>
+</body>
+</html>
