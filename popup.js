@@ -24,6 +24,62 @@ const Parent2=document.querySelector(".Parent2")
 const Side= document.getElementById("select_color")
 const ParentSide=document.getElementById("side")
 const Value=document.getElementById("value")
+const input1=document.getElementById("input1")
+const bottomBtn=document.getElementById("bottomBtn")
+const bottomRight=document.getElementById("bottomRight")
+const colorboxleft=document.getElementById("colorboxleft")
+ 
+
+
+
+
+  const  colorsarr=[
+        {
+            name:"salmon",
+            hexValue:"#FA8072"
+        },
+        {
+            name:"crimson",
+            hexValue:"#DC143C"
+        },
+        {
+            name:"red",
+            hexValue:"#FF0000"
+        },
+        {
+            name:"pink",
+            hexValue:"#FFC0CB"
+        },
+        {
+            name:"hotpink",
+            hexValue:"#FF69B4"
+        },
+        {
+            name:"deeppink",
+            hexValue:"#FF1493"
+        }
+    ]
+
+
+
+    // input box 
+
+    bottomBtn.addEventListener("click",()=>{
+        let colorName=input1.value
+        // console.log(colorName)
+        colorsarr.map((e)=>{
+           
+            console.log(e.name)
+            if(colorName==e.name){
+            console.log("inside",colorName,e.hexValue)
+            colorboxleft.style.backgroundColor=e.hexValue
+            colorboxleft.style.width=="5px"
+            colorboxleft.style.height="20px"
+                bottomRight.innerHTML=e.hexValue
+            }
+        })
+    })
+
 //html tags color
 red.addEventListener("click",()=>{
     Side.innerText="#ff0000"
@@ -72,8 +128,8 @@ blue.addEventListener("click",()=>{
 })
 green.addEventListener("click",()=>{
     Side.innerText="#00ff00"
-    ParentSide.style.color="black"
-    ParentSide.style.background="#00ff00"
+    ParentSide.style.color="white"
+    ParentSide.style.background="#008000"
 })
 //
 btn.addEventListener('click', async () => {
@@ -145,6 +201,7 @@ btn.addEventListener('click', async () => {
                 const hexColor= hexToRgb(color)
                 
                 rgbgrid.style.background=color
+                rgbgrid.style.marginTop="-25px"
                 rgb.innerText="rgb:"
                 // console.log(hexColor)
                 r.innerText=hexColor.r+","

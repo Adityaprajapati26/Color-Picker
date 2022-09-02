@@ -4,11 +4,14 @@
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
+  <h2 class="topTitle">Welcome to Color Picker</h2>
   <div class="Parent">
-  <div class="wrapper">
-    <h2>Welcome to my color picker</h2>
-    <button class="changeColorBtn">Pick color</button>
-    <div class="selectedColor">
+   
+  <div class="wrapper leftbox">
+    <h2>Click below to pick Color</h2>
+    <button class="changeColorBtn">Pick Color</button>
+    <div class="showColor">
+      <div class="selectedColor">
         <span class="colorGrid"></span>
         <span class="colorValue"></span>
     </div>
@@ -23,17 +26,18 @@
             <p id="b"></p>
       </div>
     </div>
+    </div>
   </div>
   <!-- Select Color from storage -->
-  <div class="wrapper">
+  <div class="wrapper rightbox">
     <h2>Previous selected Colors</h2>
     <div id="SelectColor">
-      <select id="Select">
+      <select id="Select" class="rightleft">
         <option >Select</option>
         
         
       </select>
-     <button id="Selected">Select</button>
+     <button id="Selected">Click</button>
     </div>
     <button id="clear">Clear</button>
    
@@ -57,10 +61,27 @@
 
   </div>
   <div id="side">
-    <p id="value">Hex value:</p>
+    <p id="value">Hex :</p>
     <p id="select_color"></p>
   </div>
 </div>
-    <script src="popup.js"></script>
+
+<!-- **** -->
+<div class="bottom">
+
+ <div class="bottomLeft">
+  <input id="input1" type="text" placeholder="Enter color name" value="">
+  <button id="bottomBtn">Add</button>
+ </div>
+ <div id="bottomRightMain">
+   <div id="colorboxleft"></div>
+    <div id="bottomRight">
+
+  </div>
+ </div>
+ 
+</div>
+    <script src="popup.js" type="module"></script>
+    <!-- <script src="db.js" type="module"></script> -->
 </body>
 </html>
