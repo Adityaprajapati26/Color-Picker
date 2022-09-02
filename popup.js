@@ -7,6 +7,10 @@ const r= document.getElementById('r')
 const g= document.getElementById('g')
 const b= document.getElementById('b')
 const rgb=document.getElementById("rgb")
+const h= document.getElementById('h')
+const s= document.getElementById('s')
+const l= document.getElementById('l')
+const hsl=document.getElementById("hsl")
 const Select=document.getElementById("Select")
 const Clear=document.getElementById("clear")
 const Selected=document.getElementById("Selected")
@@ -195,3 +199,27 @@ async function pickColor() {
         console.error(err);
     }
 }
+
+const RGBToHSL = (r, g, b) => {
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    const l = Math.max(r, g, b);
+    const s = l - Math.min(r, g, b);
+    const h = s
+      ? l === r
+        ? (g - b) / s
+        : l === g
+        ? 2 + (b - r) / s
+        : 4 + (r - g) / s
+      : 0;
+    return [
+      60 * h < 0 ? 60 * h + 360 : 60 * h,
+      100 * (s ? (l <= 0.5 ? s / (2 * l - s) : s / (2 - (2 * l - s))) : 0),
+      (100 * (2 * l - s)) / 2,
+    ];
+  }
+
+
+
+
