@@ -65,11 +65,11 @@ const colorboxleft=document.getElementById("colorboxleft")
     // input box 
 
     bottomBtn.addEventListener("click",()=>{
-        let colorName=input1.value
-        // console.log(colorName)
+        let colorName=input1.value.toLowerCase()
+        console.log(colorName)
         colorsarr.map((e)=>{
            
-            console.log(e.name)
+            // console.log(e.name)
             if(colorName==e.name){
             console.log("inside",colorName,e.hexValue)
             colorboxleft.style.backgroundColor=e.hexValue
