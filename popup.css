@@ -46,12 +46,20 @@ body {
 .selectedColor {
     display: flex;
     align-items: center;
+    text-align: center;
     margin-top: 20px;
+    /* border: 1px solid #00affa; */
+    
+    
 }
 
 .colorValue {
     margin-left: 5px;
     font-weight: bold;
+    text-align: center;
+    /* border:1px solid red;
+    margin-top: 2px; */
+    
 }
 #colorGrid
 {
@@ -61,6 +69,23 @@ body {
     border-radius: 2px;
 
 }
+#ColorGrid{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    
+      /* border :1px solid red; */
+
+}
+/* #Selected1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+   
+    margin-top: -50px;
+    border:1px solid red
+} */
 #colorValue {
     margin-left: 5px;
     font-weight: bold;
@@ -68,6 +93,18 @@ body {
     /* border :1px solid red; */
     gap:1px
     
+}
+.hslnew{
+    margin-top: -15px;
+}
+#ColorValue{
+    margin-left: 5px;
+    font-weight: bold;
+    display: flex;
+    
+    /* border :1px solid red; */
+    gap:1px;
+    margin-top: 1px;
 }
 #selectColor{
     align-items: center;

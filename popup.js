@@ -3,6 +3,8 @@ const colorGrid = document.querySelector(".colorGrid");
 const colorValue = document.querySelector(".colorValue");
 // const rgbColor= document.getElementById('colorValue')
 const rgbgrid = document.getElementById("colorGrid");
+const hslgrid=document.getElementById("ColorGrid")
+const hslvalue=document.getElementById("ColorValue")
 const r = document.getElementById("r");
 const g = document.getElementById("g");
 const b = document.getElementById("b");
@@ -28,84 +30,63 @@ const input1 = document.getElementById("input1");
 const bottomBtn = document.getElementById("bottomBtn");
 const bottomRight = document.getElementById("bottomRight");
 const colorboxleft = document.getElementById("colorboxleft");
+const h= document.getElementById('h')
+const s= document.getElementById('s')
+const l= document.getElementById('l')
+const hsl=document.getElementById("hsl")
 
-//   const  colorsarr=[
-//         {
-//             name:"salmon",
-//             hexValue:"#FA8072"
-//         },
-//         {
-//             name:"crimson",
-//             hexValue:"#DC143C"
-//         },
-//         {
-//             name:"red",
-//             hexValue:"#FF0000"
-//         },
-//         {
-//             name:"pink",
-//             hexValue:"#FFC0CB"
-//         },
-//         {
-//             name:"hotpink",
-//             hexValue:"#FF69B4"
-//         },
-//         {
-//             name:"deeppink",
-//             hexValue:"#FF1493"
-//         }
-//     ]
+
 
 const names = [
-  ["000000", "Black"],
-  ["000080", "Navy Blue"],
-  ["0000C8", "Dark Blue"],
-  ["0000FF", "Blue"],
-  ["000741", "Stratos"],
-  ["001B1C", "Swamp"],
-  ["002387", "Resolution Blue"],
-  ["002900", "Deep Fir"],
-  ["002E20", "Burnham"],
-  ["002FA7", "International Klein Blue"],
-  ["003153", "Prussian Blue"],
-  ["003366", "Midnight Blue"],
-  ["003399", "Smalt"],
-  ["003532", "Deep Teal"],
-  ["003E40", "Cyprus"],
-  ["004620", "Kaitoke Green"],
-  ["0047AB", "Cobalt"],
-  ["004816", "Crusoe"],
-  ["004950", "Sherpa Blue"],
-  ["0056A7", "Endeavour"],
-  ["00581A", "Camarone"],
-  ["0066CC", "Science Blue"],
-  ["0066FF", "Blue Ribbon"],
-  ["00755E", "Tropical Rain Forest"],
-  ["0076A3", "Allports"],
-  ["007BA7", "Deep Cerulean"],
-  ["007EC7", "Lochmara"],
-  ["007FFF", "Azure Radiance"],
-  ["008080", "Teal"],
-  ["0095B6", "Bondi Blue"],
-  ["009DC4", "Pacific Blue"],
-  ["00A693", "Persian Green"],
-  ["00A86B", "Jade"],
-  ["00CC99", "Caribbean Green"],
-  ["00CCCC", "Robin's Egg Blue"],
-  ["00FF00", "Green"],
-  ["00FF7F", "Spring Green"],
-  ["00FFFF", "Cyan / Aqua"],
-  ["010D1A", "Blue Charcoal"],
-  ["011635", "Midnight"],
-  ["011D13", "Holly"],
-  ["012731", "Daintree"],
-  ["01361C", "Cardin Green"],
-  ["01371A", "County Green"],
-  ["013E62", "Astronaut Blue"],
-  ["013F6A", "Regal Blue"],
-  ["014B43", "Aqua Deep"],
-  ["015E85", "Orient"],
-  ["016162", "Blue Stone"],
+["000000", "Black"],
+["000080", "Navy Blue"],
+["0000C8", "Dark Blue"],
+["0000FF", "Blue"],
+["000741", "Stratos"],
+["001B1C", "Swamp"],
+["002387", "Resolution Blue"],
+["002900", "Deep Fir"],
+["002E20", "Burnham"],
+["002FA7", "International Klein Blue"],
+["003153", "Prussian Blue"],
+["003366", "Midnight Blue"],
+["003399", "Smalt"],
+["003532", "Deep Teal"],
+["003E40", "Cyprus"],
+["004620", "Kaitoke Green"],
+["0047AB", "Cobalt"],
+["004816", "Crusoe"],
+["004950", "Sherpa Blue"],
+["0056A7", "Endeavour"],
+["00581A", "Camarone"],
+["0066CC", "Science Blue"],
+["0066FF", "Blue Ribbon"],
+["00755E", "Tropical Rain Forest"],
+["0076A3", "Allports"],
+["007BA7", "Deep Cerulean"],
+["007EC7", "Lochmara"],
+["007FFF", "Azure Radiance"],
+["008080", "Teal"],
+["0095B6", "Bondi Blue"],
+["009DC4", "Pacific Blue"],
+["00A693", "Persian Green"],
+["00A86B", "Jade"],
+["00CC99", "Caribbean Green"],
+["00CCCC", "Robin's Egg Blue"],
+["00FF00", "Green"],
+["00FF7F", "Spring Green"],
+["00FFFF", "Cyan / Aqua"],
+["010D1A", "Blue Charcoal"],
+["011635", "Midnight"],
+["011D13", "Holly"],
+["012731", "Daintree"],
+["01361C", "Cardin Green"],
+["01371A", "County Green"],
+["013E62", "Astronaut Blue"],
+["013F6A", "Regal Blue"],
+["014B43", "Aqua Deep"],
+["015E85", "Orient"],
+["016162", "Blue Stone"],
 ["016D39", "Fun Green"],
 ["01796F", "Pine Green"],
 ["017987", "Blue Lagoon"],
@@ -1630,19 +1611,6 @@ const names = [
 
 bottomBtn.addEventListener("click", () => {
   let colorName = input1.value.toLowerCase();
-  // console.log(colorName)
-  // colorsarr.map((e)=>{
-
-  //     // console.log(e.name)
-  //     if(colorName==e.name){
-  //     console.log("inside",colorName,e.hexValue)
-  //     colorboxleft.style.backgroundColor=e.hexValue
-  //     colorboxleft.style.width=="5px"
-  //     colorboxleft.style.height="20px"
-  //         bottomRight.innerHTML=e.hexValue
-  //     }
-  // })
-
   for (var i = 0; i < names.length; i++) {
     if (names[i][1].toLowerCase() == colorName) {
     //   p.innerText = names[i][0];
@@ -1733,8 +1701,7 @@ btn.addEventListener("click", async () => {
         chrome.storage.local.get({ Colors: [] }, function (result) {
           var Color = result.Colors;
           Color.push({ color: color, HasBeenUploadedYet: false });
-          // myMap.set(Color.color)
-          // console.log(Color.color)
+          
           chrome.storage.local.set({ Colors: Color }, function () {
             chrome.storage.local.get("Colors", function (result) {
               var Colors = result.Colors;
@@ -1753,7 +1720,7 @@ btn.addEventListener("click", async () => {
 
         //value fetch
         Selected.addEventListener("click", () => {
-          // console.log("select")
+          
           let ans = Select.value;
           console.log(ans);
           Selected.style.background = ans;
@@ -1762,14 +1729,21 @@ btn.addEventListener("click", async () => {
         //rgb color
 
         const hexColor = hexToRgb(color);
-
+        const [i,t,m] = RGBToHSL(hexColor.r,hexColor.g,hexColor.b)
+         
         rgbgrid.style.background = color;
         rgbgrid.style.marginTop = "-25px";
         rgb.innerText = "rgb:";
-        // console.log(hexColor)
+       
         r.innerText = hexColor.r + ",";
         g.innerText = hexColor.g + ",";
         b.innerText = hexColor.b;
+        hsl.innerText="hsl:"
+        hslgrid.style.background = color;
+       
+        h.innerText=Math.floor(i)+","
+        s.innerText=Math.floor(t)+","
+        l.innerText=Math.floor(m)
 
         function hexToRgb(color) {
           var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
@@ -1814,4 +1788,24 @@ async function pickColor() {
   } catch (err) {
     console.error(err);
   }
+}
+//hsl value
+function RGBToHSL (r, g, b){
+  r /= 255;
+  g /= 255;
+  b /= 255;
+  const l = Math.max(r, g, b);
+  const s = l - Math.min(r, g, b);
+  const h = s
+    ? l === r
+      ? (g - b) / s
+      : l === g
+      ? 2 + (b - r) / s
+      : 4 + (r - g) / s
+    : 0;
+  return [
+    60 * h < 0 ? 60 * h + 360 : 60 * h,
+    100 * (s ? (l <= 0.5 ? s / (2 * l - s) : s / (2 - (2 * l - s))) : 0),
+    (100 * (2 * l - s)) / 2,
+  ];
 }
