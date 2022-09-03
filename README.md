@@ -1,9 +1,9 @@
 # Color-Picker
 
-#### - We have made color picker chrome extension.
+### - We have made Color Picker chrome extension.
 <img  src="https://i.ibb.co/DKycxGY/Screenshot-3258.png" alt="color picker" />
 
-## Tech Stack 
+## Tech Stacks 
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![HTML](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) !
 
 
@@ -22,3 +22,9 @@
 
 #### - Also the value which are selected by color picker we are storing that in the form of options, so that you can use it again whenever required.
 #### - The last feature that we have applied is clear functionality, so whenever you want to clear all the things you can click on clear button, and all things will be cleared.
+
+## Team Members and Contributors :
+
+### 1]Mamata Ingole
+### 2]Aditya Kumar
+### 3]Amar Soni
